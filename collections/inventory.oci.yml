@@ -3,9 +3,9 @@ config_file: ~/.oci/config
 config_profile: DEFAULT
 regions: all
 fetch_db_hosts: true
-fetch_compute_hosts: True
+#fetch_compute_hosts: True
 enable_parallel_processing: yes
-debug: true
+#debug: true
 oci_identity_tenancy_facts:
     tenancy_id: "ocid1.tenancy.oc1..aaaaaaaawquag7eeulmm6e2yoykcvigene6piosc6rwgglznmt4d5iubifuq"
 vars:
