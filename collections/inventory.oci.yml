@@ -6,7 +6,7 @@ enable_parallel_processing: yes
 vars:
     ansible_python_interpreter: /usr/bin/python3
 #fetch_db_hosts: true
-#fetch_compute_hosts: True
+fetch_compute_hosts: True
 #debug: true
 
 oci_identity_tenancy_facts:
