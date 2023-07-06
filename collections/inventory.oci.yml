@@ -1,14 +1,29 @@
----
 plugin: oracle.oci.oci
+cache: yes
+cache_plugin: jsonfile
+cache_timeout: 7200
+cache_connection: /tmp/oci_inventory
+cache_prefix: oci
+config_file: ~/.oci/config
+config_profile: DEFAULT
 regions: all
 fetch_db_hosts: true
-include_host_filters:
-  - "'olautomation' == freeform_tags.project"
+fetch_compute_hosts: True
+enable_parallel_processing: yes
+debug: true
+oci_identity_tenancy_facts:
+    tenancy_id: "ocid1.tenancy.oc1..aaaaaaaawquag7eeulmm6e2yoykcvigene6piosc6rwgglznmt4d5iubifuq"
+vars:
+    ansible_python_interpreter: /usr/bin/python3
 
-compatments:
+compartments:
   - compartment_ocid: "ocid1.compartment.oc1..aaaaaaaawplfybzszx4gaaupjcy3ftfpebgh7bumrkzsglchoandq3gtckya"
     fetch_compute_hosts: true
 
 hostname_format_preferences:
   - "public_ip"
   - "private_ip"
+  - "id"
+    
+    #- compartment_name: "Ricardo.d.carrillo"
+    #parent_compartment_ocid: "ocid1.tenancy.oc1..aaaaaaaawquag7eeulmm6e2yoykcvigene6piosc6rwgglznmt4d5iubifuq"
