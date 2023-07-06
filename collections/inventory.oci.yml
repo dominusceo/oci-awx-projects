@@ -1,3 +1,4 @@
+---
 plugin: oracle.oci.oci
 cache: yes
 cache_plugin: jsonfile
