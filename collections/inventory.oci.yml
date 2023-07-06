@@ -4,7 +4,7 @@ config_profile: DEFAULT
 regions: all
 enable_parallel_processing: yes
 vars:
-    ansible_python_interpreter: /usr/bin/python3
+    ansible_python_interpreter: /usr/bin/python
 fetch_db_hosts: true
 #fetch_compute_hosts: True
 #debug: true
